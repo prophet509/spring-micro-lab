@@ -5,12 +5,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 
 @SpringBootTest
-@Import(value = TestcontainersConfiguration.class)
+@Import(value = ContainersConfig.class)
 public class TestCatalogServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.from(CatalogServiceApplication::main)
-                .with(TestcontainersConfiguration.class)
+                .with(ContainersConfig.class)
                 .run(args);
     }
 }
